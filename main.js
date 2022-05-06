@@ -1,0 +1,52 @@
+var minutes = 25;
+var seconds = "00";
+
+var click = new Audio("click.mp3");
+var bell = new Audio("bell.mp3");
+
+function template (){
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+}
+
+/* I am using a predefined function aka setInterval and it is going to execute a function
+    that i will define by name minutesTimer and this function is going to be executed every 60000
+     milliseconds. 60000 mlsec = 60 sec aka 1 min */
+function start (){
+    click.play();
+
+    minutes = 24;
+    seconds = 59;
+
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    var minutes_interval = setInterval(minutesTimer, 60000);
+    var seconds_interval = setInterval(secondsTimer, 1000);
+
+
+    function minutesTimer (){
+        minutes = minutes - 1;
+        document.getElementById("minutes").innerHTML= minutes;
+    
+    }
+    function secondsTimer (){
+        seconds = seconds - 1;
+        document.getElementById("seconds").innerHTML= seconds;
+        if(seconds <= 0){
+            if (minutes <=0) {
+                clearInterval(minutes_interval);
+                clearInterval(seconds_interval);
+    
+                document.getElementById("done").innerHTML= "Session Completed! Take a Break!";
+    
+                document.getElementById("done").classList.add("show_message");
+                bell.play();
+            }
+            seconds = 60;
+        }
+    }
+    
+
+}
+

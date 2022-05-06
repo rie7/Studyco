@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a20755748.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body onload="template ()">
+    <nav>
+         <ul class="flex-list">
+            <li class="flex-item"><a href="#">studyco</a></li>
+            <li class="flex-item"><a href="#">Home</a></li>
+            <li class="flex-item"><a href="#">Results</a></li>
+            <li class="flex-item"><a href="#">About Us</a></li>
+        </ul>
+
+    </nav>
+    
+    <section>
+        <div id="motivation">
+            <h1>Here to help you study smarter</h1>
+            <button class="btn" onclick="start ()"><a href="#circle">Start</a></button>
+        </div>
+
+        <div>
+            <h3 id="done"></h3>
+        </div>
+
+        <!--Main Timer-->
+    <div id="circle">
+        <div class="container timer">
+            <div class="row">
+                <div class="col-5">
+                    <h4 id="minutes"></h4>
+                </div>
+                <div class="col-2">
+                    <h4>:</h4>
+                </div>
+                <div class="col-5">
+                    <h4 id="seconds"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Start And Reset Buttons-->
+        <div class="container">
+            <a href="index.html"><i class="fa-solid fa-rotate-right fa-2x"></i></a>
+        </div>
+
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
